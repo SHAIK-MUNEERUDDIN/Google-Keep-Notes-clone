@@ -1,0 +1,224 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*:not(i) {
+    font-family: 'Alex Brush', cursive !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    background-color: white;
+
+}
+
+
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.container {
+    padding: 3rem;
+    background: linear-gradient(to bottom, #bdd1f0, #dbcbe7);
+}
+
+#input-box {
+    width: 350px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 12px -1px #616164;
+    border-radius: 7px;
+}
+
+#input-box input,
+textarea {
+    outline: none;
+    width: 100%;
+    padding: 5px 0;
+    margin: 5px 0;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 7px;
+}
+
+#add-btn {
+    display: block;
+    padding: 8px;
+    width: 100px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 7px;
+    font-size: 15px;
+    height: 40px;
+    background-color: #2f276c;
+    color: white;
+    box-shadow: 5px 5px 12px -1px #2f276c;
+    outline: none;
+    border: none;
+}
+
+
+#add-btn:hover {
+    color: #13eb30;
+    background-color: #201c3f;
+    cursor: pointer;
+}
+
+
+nav .nav-items {
+    margin-top: 9rem;
+}
+
+nav .nav-items li {
+    list-style: none;
+    padding: 20px 0px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+nav .nav-items li a:hover {
+    color: white;
+}
+
+nav .nav-items li a {
+    text-decoration: none;
+    padding: 20px 40px;
+    font-size: 1.8rem;
+    color: black;
+}
+
+#notes-list {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.note {
+    border: 1px solid black;
+    width: 280px;
+    height: 270px;
+    padding: 2rem;
+    border-radius: 7px;
+    box-shadow: 5px 5px 12px -1px #616164;
+}
+
+.note .btn {
+    display: block;
+    padding: 8px;
+    width: 40px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 7px;
+    font-size: 15px;
+    height: 35px;
+    background-color: #2f276c;
+    color: white;
+    box-shadow: 3px 3px 5px 0px black;
+    outline: none;
+    border: none;
+}
+
+.note .delete:hover {
+    cursor: pointer;
+    background-color: rgb(209, 47, 47);
+}
+
+.note .archive:hover {
+    cursor: pointer;
+    background-color: rgb(216, 214, 103);
+}
+
+.note .btn:hover i {
+    scale: 125%;
+}
+
+.note .title {
+    margin-top: 10px;
+    font-size: 1.7rem;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.note .text {
+    font-size: 1.7rem;
+    background-color: white;
+    resize: none;
+}
+
+#deleted-list {
+    margin-top: 2.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.btn-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+header {
+    grid-area: header;
+    background: linear-gradient(to bottom, #4f8edd, #a87bc1);
+}
+
+nav {
+    grid-area: nav;
+    background: linear-gradient(to bottom, #bdd1f0, #dbcbe7);
+}
+
+.search {
+    grid-area: search;
+    background: linear-gradient(to bottom, #bdd1f0, #dbcbe7);
+    text-align: center;
+}
+
+.search input {
+    width: 70%;
+    height: 30px;
+    margin: 15px auto;
+    font-size: 20px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid;
+    padding: 0 10px;
+}
+
+.container {
+    grid-area: main;
+    overflow-y: auto;
+}
+
+footer {
+    grid-area: footer;
+    border: 2px solid;
+    background: linear-gradient(to bottom, #4f8edd, #a87bc1);
+}
+
+.mega-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        "header header header header header header"
+        "nav search search search search search"
+        "nav main main main main main"
+        "footer footer footer footer footer footer";
+    grid-template-rows: 50px 60px 450px 60px;
+    max-height: 100vh;
+    gap: 1rem;
+}

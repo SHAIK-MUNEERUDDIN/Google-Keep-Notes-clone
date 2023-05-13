@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Notes App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="mega-container">
+        <header>
+            <h1>Keep Notes <i class="fa fa-pencil-square" aria-hidden="true"></i> </h1>
+        </header>
+        <nav>
+            <div class="nav-items">
+                <li><a href=""> Notes <i class="fa fa-book" aria-hidden="true"></i></a></li>
+                <li><a href="">Archived <i class="fa fa-archive" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="" onclick="archive(event)">Deleted <i class="fa fa-trash" aria-hidden="true"></i></a></li>
+            </div>
+        </nav>
+        <div class="search"> <input type="search" placeholder="search ">
+        </div>
+        <div class="container">
+            <div id="input-box">
+                <input id="addTitle" type="text" name="title" placeholder="Title">
+                <textarea id="addNote" name="text" placeholder="Take a note" id="" cols="30" rows="10"></textarea>
+                <button id="add-btn">Add Note</button>
+            </div>
+            <div id="notes-list">
+
+            </div>
+            <div id="deleted-list" style="display: none;"></div>
+        </div>
+
+        <footer>footer</footer>
+    </div>
+    <script src="main.js"></script>
+    <script src="delete.js"></script>
+</body>
+
+</html>
