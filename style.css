@@ -350,6 +350,7 @@ footer {
     text-align: center;
     color: white;
     background: linear-gradient(to bottom, #4f8edd, #a87bc1);
+    padding: 1rem;
 }
 
 .mega-container {
@@ -360,7 +361,7 @@ footer {
         "nav search search search search search"
         "nav main main main main main"
         "footer footer footer footer footer footer";
-    grid-template-rows: 50px 55px 440px 50px;
+    grid-template-rows: 50px 55px 440px 60px;
     max-height: 100vh;
     gap: 0.7rem;
 }

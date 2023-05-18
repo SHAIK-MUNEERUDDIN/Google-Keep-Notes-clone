@@ -13,7 +13,7 @@
             "search search search search"
             "main main main main"
             "footer footer footer footer";
-        grid-template-rows: 50px 55px 50px 440px 50px;
+        grid-template-rows: 50px 45px 45px 500px 55px;
         max-height: 100vh;
         gap: 0.1rem;
     }
