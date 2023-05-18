@@ -1,7 +1,7 @@
 @media screen and (max-width: 768px) {
 
     html {
-        font-size: 50%;
+        font-size: 55%;
     }
 
     .mega-container {
@@ -39,4 +39,7 @@
         width: 270px;
     }
 
+    .note {
+        height: 270px;
+    }
 }
