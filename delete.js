@@ -2,11 +2,12 @@ const noteInput = document.querySelector("#input-box");
 const deletedList = document.querySelector("#deleted-list");
 let deletedNotes = [];
 
-function archive(event) {
+function deleted(event) {
     event.preventDefault();
     deletedList.style.display = "flex";
     noteInput.style.display = "none";
     noteList.style.display = "none";
+    updateDeletedNotesUI();
 }
 
 function updateDeletedNotesUI() {
@@ -55,6 +56,14 @@ function addDeletedNoteAndRender(note) {
     showNotes();
 }
 
+
+
+function removeDeletedNote(index) {
+    removeDeletedNoteFromLocalStorage(index);
+    updateDeletedNotesUI();
+    showNotes(); // Refresh the displayed notes after removing the deleted note
+}
+
 function removeDeletedNoteFromLocalStorage(index) {
     let deletedNotes = localStorage.getItem('deleted-notes');
     if (deletedNotes === null) {
@@ -65,12 +74,6 @@ function removeDeletedNoteFromLocalStorage(index) {
 
     deletedNotes.splice(index, 1);
     localStorage.setItem('deleted-notes', JSON.stringify(deletedNotes));
-}
-
-function removeDeletedNote(index) {
-    removeDeletedNoteFromLocalStorage(index);
-    updateDeletedNotesUI();
-    showNotes(); // Refresh the displayed notes after removing the deleted note
 }
 
 function restoreNote(index) {
@@ -98,4 +101,3 @@ function restoreNote(index) {
 
 
 // Render deleted notes on page load
-updateDeletedNotesUI();
