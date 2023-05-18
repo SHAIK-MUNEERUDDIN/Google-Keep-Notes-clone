@@ -13,7 +13,9 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     background-color: white;
-
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-stroke: 0.2px;
 }
 
 .container::-webkit-scrollbar {
