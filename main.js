@@ -46,11 +46,16 @@ function showNotes() {
     } else {
         notes = JSON.parse(notes);
     }
-    for (let i = 0; i < notes.length; i++) {
-        if (notes[i] === null) {
-            continue; // Skip null values
-        }
-        notesHTML += `<div class="note" style="background-color: ${notes[i].color}">
+    if (notes.length === 0) {
+        notesHTML = `<h1 style="color: green;">Notes you add will appear here! <i class="fa fa-pencil-square-o" aria-hidden="true"></i></h1>`;
+        noteList.innerHTML = notesHTML;
+    }
+    else {
+        for (let i = 0; i < notes.length; i++) {
+            if (notes[i] === null) {
+                continue; // Skip null values
+            }
+            notesHTML += `<div class="note" style="background-color: ${notes[i].color}">
             <div class="btn-list">
                 <button class="delete btn" id="${i}" onclick="deleteNote(${i})"><i class="fa fa-trash" aria-hidden="true"></i></button>
                 <button class="archive btn" id="${i}" onclick="archiveNote(${i})"><i class="fa fa-archive" aria-hidden="true"></i></button>
@@ -58,9 +63,12 @@ function showNotes() {
             <div class="title">${notes[i].title}</div>
             <textarea class="text" rows="8" readonly>${notes[i].note}</textarea>
         </div>`;
+        }
     }
     noteList.innerHTML = notesHTML;
 }
+
+
 
 function deleteNote(index) {
     let notes = localStorage.getItem('local-notes');
