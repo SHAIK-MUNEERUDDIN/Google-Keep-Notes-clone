@@ -165,6 +165,14 @@ nav .nav-items li a {
     gap: 1rem;
 }
 
+#archived-list {
+    margin-top: 2.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+}
+
 .btn-list {
     display: flex;
     justify-content: space-between;

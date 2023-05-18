@@ -5,6 +5,7 @@ let deletedNotes = [];
 function deleted(event) {
     event.preventDefault();
     deletedList.style.display = "flex";
+    archiveList.style.display = "none";
     noteInput.style.display = "none";
     noteList.style.display = "none";
     updateDeletedNotesUI();
@@ -13,19 +14,20 @@ function deleted(event) {
 function updateDeletedNotesUI() {
     let deletedNotesHTML = '';
     let deletedNotes = localStorage.getItem('deleted-notes');
-    if (deletedNotes === null) {
-        deletedNotes = [];
+    if (deletedNotes === null || JSON.parse(deletedNotes).length === 0) {
+        deletedList.innerHTML = `<h1 style="color: red;">Recycle bin is empty!</h1>`;
     } else {
         deletedNotes = JSON.parse(deletedNotes);
-    }
-    for (let i = 0; i < deletedNotes.length; i++) {
-        if (deletedNotes[i] === null) {
-            continue; // Skip null values
+        for (let i = 0; i < deletedNotes.length; i++) {
+            if (deletedNotes[i] === null) {
+                continue; // Skip null values
+            }
+            deletedNotesHTML += createDeletedNoteHTML(deletedNotes[i], i);
         }
-        deletedNotesHTML += createDeletedNoteHTML(deletedNotes[i], i);
+        deletedList.innerHTML = deletedNotesHTML;
     }
-    deletedList.innerHTML = deletedNotesHTML;
 }
+
 
 function createDeletedNoteHTML(note, index) {
     return `<div class="note" style="background-color: ${note.color}">
@@ -98,6 +100,3 @@ function restoreNote(index) {
     updateDeletedNotesUI();
     showNotes();
 }
-
-
-// Render deleted notes on page load

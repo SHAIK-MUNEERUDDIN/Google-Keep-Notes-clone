@@ -47,14 +47,17 @@ function showNotes() {
         notes = JSON.parse(notes);
     }
     for (let i = 0; i < notes.length; i++) {
+        if (notes[i] === null) {
+            continue; // Skip null values
+        }
         notesHTML += `<div class="note" style="background-color: ${notes[i].color}">
-        <div class="btn-list">
-        <button class="delete btn" id="${i}" onclick="deleteNote(${i})"><i class="fa fa-trash" aria-hidden="true"></i></button>
-        <button class="archive btn" id="${i}" onclick="ArchiveNote(${i})"><i class="fa fa-archive" aria-hidden="true"></i></button>
-        </div>
-        <div class="title">${notes[i].title}</div>
-        <textarea class="text" rows="7" readonly>${notes[i].note}</textarea>
-    </div>`;
+            <div class="btn-list">
+                <button class="delete btn" id="${i}" onclick="deleteNote(${i})"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                <button class="archive btn" id="${i}" onclick="archiveNote(${i})"><i class="fa fa-archive" aria-hidden="true"></i></button>
+            </div>
+            <div class="title">${notes[i].title}</div>
+            <textarea class="text" rows="7" readonly>${notes[i].note}</textarea>
+        </div>`;
     }
     noteList.innerHTML = notesHTML;
 }
@@ -68,8 +71,22 @@ function deleteNote(index) {
     }
     const deletedNote = notes.splice(index, 1)[0]; // Remove the note from the array and store it in a variable
     localStorage.setItem('local-notes', JSON.stringify(notes));
-    showNotes();
     addDeletedNoteAndRender(deletedNote); // Call a new function to add the deleted note to the "deleted notes" section
+    showNotes();
+}
+
+function archiveNote(index) {
+    let notes = localStorage.getItem('local-notes');
+    if (notes === null) {
+        return;
+    } else {
+        notes = JSON.parse(notes);
+    }
+    const archivedNote = notes.splice(index, 1)[0];
+    localStorage.setItem('local-notes', JSON.stringify(notes));
+    addArchivedNoteAndRender(archivedNote);
+    updateArchivedNotesUI(); // Add this line to update the archived notes UI
+    showNotes();
 }
 
 

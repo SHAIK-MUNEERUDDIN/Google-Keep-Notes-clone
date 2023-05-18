@@ -18,7 +18,7 @@
         <nav>
             <div class="nav-items">
                 <li><a href=""> Notes <i class="fa fa-book" aria-hidden="true"></i></a></li>
-                <li><a href="">Archived <i class="fa fa-archive" aria-hidden="true"></i></a>
+                <li><a href="" onclick="archive(event)">Archived <i class="fa fa-archive" aria-hidden="true"></i></a>
                 </li>
                 <li><a href="" onclick="deleted(event)">Deleted <i class="fa fa-trash" aria-hidden="true"></i></a></li>
             </div>
@@ -35,12 +35,14 @@
 
             </div>
             <div id="deleted-list" style="display: none;"></div>
+            <div id="archived-list" style="display: none;"></div>
         </div>
 
         <footer>footer</footer>
     </div>
     <script src="main.js"></script>
-    <script src="delete.js"></script>
+    <script src="deleted.js"></script>
+    <script src="archive.js"></script>
 </body>
 
 </html>
