@@ -329,6 +329,7 @@ nav {
     overflow-y: auto;
     padding: 3rem;
     background: linear-gradient(to bottom, #bdd1f0, #dbcbe7);
+    scroll-behavior: smooth;
 }
 
 footer {
