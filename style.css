@@ -128,15 +128,14 @@ nav .nav-items li a {
     box-shadow: 3px 3px 5px 0px black;
     outline: none;
     border: none;
+    cursor: pointer;
 }
 
 .note .delete:hover {
-    cursor: pointer;
     background-color: rgb(209, 47, 47);
 }
 
 .note .archive:hover {
-    cursor: pointer;
     background-color: rgb(216, 214, 103);
 }
 
@@ -155,6 +154,87 @@ nav .nav-items li a {
     font-size: 1.7rem;
     background-color: white;
     resize: none;
+}
+
+.note .delete::after {
+    content: "Remove";
+    position: relative;
+    top: -60px;
+    left: -65%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.note .delete:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.note .archive::after {
+    content: "Archive";
+    position: relative;
+    top: -60px;
+    left: -65%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.note .archive:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.note .permanent-delete::after {
+    content: "Erase";
+    position: relative;
+    top: -60px;
+    left: -65%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.note .permanent-delete:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.note .undo::after {
+    content: "Restore";
+    position: relative;
+    top: -60px;
+    left: -65%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.note .undo:hover::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 #deleted-list {

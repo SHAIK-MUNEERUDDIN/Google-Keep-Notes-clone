@@ -30,7 +30,7 @@ function createArchivedNoteHTML(note, index) {
     return `<div class="note" style="background-color: ${note.color}">
     <div class="btn-list">
       <button class="delete btn" onclick="removeArchivedNote(${index})"><i class="fa fa-trash" aria-hidden="true"></i></button>
-      <button class="archive btn" id="${index}" onclick="restoreNoteFromArchive(${index})"><i class="fa fa-undo" aria-hidden="true"></i></button>
+      <button class="undo btn" id="${index}" onclick="restoreNoteFromArchive(${index})"><i class="fa fa-undo" aria-hidden="true"></i></button>
     </div>
     <div class="title">${note.title}</div>
     <textarea class="text" rows="8" readonly>${note.note}</textarea>

@@ -32,8 +32,8 @@ function updateDeletedNotesUI() {
 function createDeletedNoteHTML(note, index) {
     return `<div class="note" style="background-color: ${note.color}">
     <div class="btn-list">
-        <button class="delete btn" onclick="removeDeletedNote(${index})"><i class="fa fa-ban" aria-hidden="true"></i></button>
-        <button class="archive btn" id="${index}" onclick="restoreNote(${index})"><i class="fa fa-undo" aria-hidden="true"></i></button>
+        <button class=" permanent-delete btn" onclick="removeDeletedNote(${index})"><i class="fa fa-ban" aria-hidden="true"></i></button>
+        <button class="undo btn" id="${index}" onclick="restoreNote(${index})"><i class="fa fa-undo" aria-hidden="true"></i></button>
     </div>
     <div class="title">${note.title}</div>
     <textarea class="text" rows="8" readonly>${note.note}</textarea>
