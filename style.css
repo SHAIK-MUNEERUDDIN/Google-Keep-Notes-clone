@@ -21,6 +21,7 @@ html {
 h1 {
     text-align: center;
     color: white;
+    margin: 8px 0;
 }
 
 /* nav bar styling begins here */
@@ -32,20 +33,27 @@ nav .nav-items li {
     list-style: none;
     padding: 20px 0px;
     text-align: center;
-    cursor: pointer;
+    margin: 5px 0;
+
 
 }
 
+nav .nav-items li a.active,
 nav .nav-items li a:hover {
-    color: white;
+    color: #a403df;
+    border-bottom: 0.3rem solid #a503dfdb;
+    padding: 0.5rem 0;
+    border-radius: 0.1rem;
+    transition: all 0.2s linear !important;
 }
 
 nav .nav-items li a {
     text-decoration: none;
-    padding: 20px 40px;
     font-size: 1.8rem;
     color: black;
+    cursor: pointer;
 }
+
 
 /* nav bar styling ends here */
 

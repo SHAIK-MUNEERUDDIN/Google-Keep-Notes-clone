@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quick Notes App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -17,10 +18,15 @@
         </header>
         <nav>
             <div class="nav-items">
-                <li><a href=""> Notes <i class="fa fa-book" aria-hidden="true"></i></a></li>
-                <li><a href="" onclick="archive(event)">Archived <i class="fa fa-archive" aria-hidden="true"></i></a>
-                </li>
-                <li><a href="" onclick="deleted(event)">Deleted <i class="fa fa-trash" aria-hidden="true"></i></a></li>
+                <ul>
+                    <li><a href="" class=" single active"> Notes <i class="fa fa-book" aria-hidden="true"></i></a></li>
+                    <li><a href="" class="single" onclick="archive(event)">Archived <i class="fa fa-archive"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="" class="single" onclick="deleted(event)">Deleted <i class="fa fa-trash"
+                                aria-hidden="true"></i></a>
+                    </li>
+                </ul>
             </div>
         </nav>
         <div class="search"> <input type="search" placeholder="search ">
@@ -40,10 +46,10 @@
 
         <footer>
             <h2>Copyright &#169; 2023 XYZ Corp. | All Rights Reserved</h2>
-            <h3>Designed and Developed by <a class="dev-link" href="https://skmuneeruddin.netlify.app/"
+            <h2>Designed and Developed by <a class="dev-link" href="https://skmuneeruddin.netlify.app/"
                     target="_blank">Shaik
                     Muneeruddin</a>
-            </h3>
+            </h2>
         </footer>
     </div>
     <script src="main.js"></script>
