@@ -270,6 +270,11 @@ textarea {
 
 /* styling for notes list,deleted list,archive list ends here */
 
+.dev-link {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
 
 
 
@@ -311,6 +316,8 @@ nav {
 footer {
     grid-area: footer;
     border: 2px solid;
+    text-align: center;
+    color: white;
     background: linear-gradient(to bottom, #4f8edd, #a87bc1);
 }
 
@@ -322,9 +329,9 @@ footer {
         "nav search search search search search"
         "nav main main main main main"
         "footer footer footer footer footer footer";
-    grid-template-rows: 50px 60px 450px 60px;
+    grid-template-rows: 50px 55px 440px 50px;
     max-height: 100vh;
-    gap: 1rem;
+    gap: 0.7rem;
 }
 
 /*Grid layout design ends here*/
