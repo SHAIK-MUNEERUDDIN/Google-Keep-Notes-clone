@@ -77,6 +77,16 @@ nav .nav-items li a {
     cursor: pointer;
 }
 
+.search input {
+    width: 70%;
+    height: 3.3rem;
+    margin: 1.5rem auto;
+    font-size: 1.8rem;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid;
+    padding: 0 10px;
+}
 
 /* nav bar styling ends here */
 
@@ -326,16 +336,6 @@ nav {
     text-align: center;
 }
 
-.search input {
-    width: 70%;
-    height: 3.3rem;
-    margin: 15px auto;
-    font-size: 1.8rem;
-    border-radius: 8px;
-    outline: none;
-    border: 1px solid;
-    padding: 0 10px;
-}
 
 .container {
     grid-area: main;
