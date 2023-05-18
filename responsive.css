@@ -1,4 +1,9 @@
 @media screen and (max-width: 768px) {
+
+    html {
+        font-size: 50%;
+    }
+
     .mega-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -28,4 +33,10 @@
         margin: 0px 5px;
         padding: 10px 0;
     }
+
+
+    #input-box {
+        width: 270px;
+    }
+
 }
