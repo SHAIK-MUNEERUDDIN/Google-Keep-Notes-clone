@@ -16,19 +16,6 @@ html {
 
 }
 
-html::-webkit-scrollbar {
-    width: 0.8rem;
-}
-
-html::-webkit-scrollbar-track {
-    background: rgb(157, 196, 219);
-}
-
-html::-webkit-scrollbar-thumb {
-    background: #0188f7;
-}
-
-
 .container::-webkit-scrollbar {
     width: 0.5rem;
 }
