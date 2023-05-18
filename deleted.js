@@ -8,8 +8,19 @@ function deleted(event) {
     archiveList.style.display = "none";
     noteInput.style.display = "none";
     noteList.style.display = "none";
+    active(event.target);
     updateDeletedNotesUI();
 }
+
+function active(a) {
+    items = document.querySelectorAll('.single.active');
+    if (items.length) {
+        items[0].className = 'single';
+    }
+    a.className = 'single active';
+
+}
+
 
 function updateDeletedNotesUI() {
     let deletedNotesHTML = '';

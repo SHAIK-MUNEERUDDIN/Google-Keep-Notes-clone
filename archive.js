@@ -5,9 +5,18 @@ function archive(event) {
     deletedList.style.display = "none";
     noteInput.style.display = "none";
     noteList.style.display = "none";
-    updateArchivedNotesUI()
+    active(event.target);
+    updateArchivedNotesUI();
 }
 
+function active(a) {
+    items = document.querySelectorAll('.single.active');
+    if (items.length) {
+        items[0].className = 'single';
+    }
+    a.className = 'single active';
+
+}
 
 function addArchivedNoteToLocalStorage(note) {
     let archivedNotes = localStorage.getItem('archive-notes');
