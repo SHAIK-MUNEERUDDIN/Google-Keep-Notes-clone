@@ -36,7 +36,7 @@ function createDeletedNoteHTML(note, index) {
         <button class="archive btn" id="${index}" onclick="restoreNote(${index})"><i class="fa fa-undo" aria-hidden="true"></i></button>
     </div>
     <div class="title">${note.title}</div>
-    <textarea class="text" rows="7" readonly>${note.note}</textarea>
+    <textarea class="text" rows="8" readonly>${note.note}</textarea>
   </div>`;
 }
 

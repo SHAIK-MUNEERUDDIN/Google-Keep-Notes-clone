@@ -56,7 +56,7 @@ function showNotes() {
                 <button class="archive btn" id="${i}" onclick="archiveNote(${i})"><i class="fa fa-archive" aria-hidden="true"></i></button>
             </div>
             <div class="title">${notes[i].title}</div>
-            <textarea class="text" rows="7" readonly>${notes[i].note}</textarea>
+            <textarea class="text" rows="8" readonly>${notes[i].note}</textarea>
         </div>`;
     }
     noteList.innerHTML = notesHTML;
