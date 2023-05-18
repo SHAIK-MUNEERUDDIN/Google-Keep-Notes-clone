@@ -1,0 +1,31 @@
+@media screen and (max-width: 768px) {
+    .mega-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "header header header header"
+            "nav nav nav nav"
+            "search search search search"
+            "main main main main"
+            "footer footer footer footer";
+        grid-template-rows: 50px 55px 50px 440px 50px;
+        max-height: 100vh;
+        gap: 0.4rem;
+    }
+
+    .nav-items ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav .nav-items {
+        margin-top: 0rem;
+    }
+
+    nav .nav-items li {
+        margin: 0px 5px;
+        padding: 10px 0;
+    }
+}
